@@ -1,0 +1,110 @@
+//                             Mohamed Hassan                       //
+
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+using namespace std;
+
+int const cap = 10
+
+
+list Size
+	int arr[cap];
+
+
+
+
+public:
+	list() {size = 0;}
+  
+	bool set(int index, int val);
+	int get(int index)
+  
+	int Size();
+	bool insert(int index, int val);
+  Print All Elements in size
+	void Start_Program();
+};
+int list::get(int index) {
+	int ind = index-1;
+	if (ind >= cap || ind < 0 || ind >= size)
+	{
+		cout << "Not Found " ;
+		return -1;
+	}
+	 return arr[ind];
+}
+
+
+
+
+
+
+
+
+
+bool list::insert(int index, int val) {
+	int ind = index - 1;
+	if (ind >= cap || ind<0 || ind>=size)return false;
+	for (int pos = size - 1; pos >= ind; pos--)
+		arr[pos+1] = arr[pos ];
+	arr[ind] = val;
+	size++;
+	return true;
+}
+
+
+
+
+
+
+bool list::set(int index, int val) {
+	int ind = index - 1;
+	if (ind >= cap || ind < 0 || ind >= size)return false;
+	arr[ind] = val;
+	return true;
+}
+
+
+
+
+
+
+bool list::remove(int index) {
+	int ind = index - 1;
+	if (ind >= cap || ind < 0 || ind >= size)return false;
+	for (int pos = ind; pos < size; pos++)
+		arr[pos] = arr[pos + 1];
+	size--;
+
+
+
+
+
+
+return true;
+
+}
+void list::pushpack(int val) {
+	arr[size] = val;
+	if (size == cap)return;
+	size++;
+}
+int list::Size() {
+	return size;
+
+
+}
+void list::print() {
+	for (int x = 0; x < size; x++) {
+		cout << arr[x];
+	}
+}
+
+
+	}
+int main()
+{	
+	
+	list l2;
+}
