@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class Node {
+
+
+public:
+	int data;
+	Node* next;
+};
+
+
+
+
+
+int main(int argc, char const* arg[]) {
+	Node* first = new Node();
+	first->data = 5;
+	cout << first-> data;
+	first->next = new Node();
+	first->next->data = 10;
+	cout << first->next->data << '/n';
+	return 0;
+
+
+}
